@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -140,8 +141,17 @@ public class listagemVIEW extends javax.swing.JFrame {
         
         ProdutosDAO produtosdao = new ProdutosDAO();
         
-        //produtosdao.venderProduto(Integer.parseInt(id));
+        try{
+            
+        produtosdao.venderProduto(Integer.parseInt(id));
+        JOptionPane.showMessageDialog(null, "Produto alterado para Vendido");
         listarProdutos();
+        
+        }catch (Exception e){
+            
+            JOptionPane.showMessageDialog(null, "Erro "+e);
+        }
+        
     }//GEN-LAST:event_btnVenderActionPerformed
 
     private void btnVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVendasActionPerformed
