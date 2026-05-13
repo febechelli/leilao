@@ -73,4 +73,9 @@ public class ProdutosDAO {
 
         return listagem;
     }
+    
+    public void venderProduto(){}
+    
+    public void listarProdutosVendidos(){}
+    
 }
