@@ -146,6 +146,7 @@ public class listagemVIEW extends javax.swing.JFrame {
         produtosdao.venderProduto(Integer.parseInt(id));
         JOptionPane.showMessageDialog(null, "Produto alterado para Vendido");
         listarProdutos();
+        id_produto_venda.setText("");
         
         }catch (Exception e){
             
